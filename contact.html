@@ -73,7 +73,7 @@
           </div>
           <div class="info-card">
             <div class="info-card__label">E-MAIL</div>
-            <div class="info-card__val info-card__val--break"><a href="mailto:sanko-watanabe@maia.eonet.ne.jp">sanko-watanabe@maia.eonet.ne.jp</a></div>
+            <div class="info-card__val info-card__val--break"><a href="mailto:sanko_watanabe@maia.eonet.ne.jp">sanko_watanabe@maia.eonet.ne.jp</a></div>
           </div>
           <div class="info-card">
             <div class="info-card__label">所在地</div>
@@ -94,6 +94,11 @@
         </div>
 
         <form class="form" id="contact-form" novalidate>
+          <!-- ハニーポット: 人には見えない。ボットが埋めた送信を弾くための項目 -->
+          <div class="form__hp" aria-hidden="true">
+            <label for="f-website">ウェブサイト（入力しないでください）</label>
+            <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <div class="field">
             <label for="f-name">お名前 <span class="req">*</span></label>
             <input type="text" id="f-name" name="name" placeholder="山田 太郎" autocomplete="name">
@@ -114,8 +119,8 @@
             <textarea id="f-message" name="message" rows="5" placeholder="応募内容・ご質問をご記入ください"></textarea>
           </div>
           <p class="form__error" id="form-error" hidden>必須項目（お名前・メール・応募内容）をご入力ください。</p>
-          <button type="submit" class="form__submit">応募内容を送信する</button>
-          <p class="form__note">※ これはデザイン確認用のフォームです。実際の送信は行われません。</p>
+          <button type="submit" class="form__submit" id="form-submit">応募内容を送信する</button>
+          <p class="form__note">※ ご入力いただいた個人情報は、採用選考に関するご連絡のみに利用し、それ以外の目的では使用いたしません。</p>
         </form>
       </div>
     </section>
