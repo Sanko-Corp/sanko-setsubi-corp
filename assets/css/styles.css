@@ -435,6 +435,9 @@ a.feature:hover .text-link { gap: 11px; }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue-accent); outline: none; }
 .form__submit { padding: 15px; border-radius: 10px; background: var(--blue); color: #fff; font-weight: 700; font-size: 15px; margin-top: 4px; transition: background .2s ease; }
 .form__submit:hover { background: var(--blue-hover); }
+.form__submit:disabled { background: var(--muted-2); cursor: default; }
+/* ハニーポット: 支援技術・視覚の双方から隠す（display:none だとボットに見抜かれる） */
+.form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form__error { font-size: 13px; color: var(--error); font-weight: 500; }
 .form__note { font-size: 12px; color: var(--muted-2); }
 
