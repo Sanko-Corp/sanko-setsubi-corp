@@ -26,38 +26,105 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["Organization", "LocalBusiness", "Plumber"],
+        "@type": [
+          "Organization",
+          "LocalBusiness",
+          "Plumber"
+        ],
         "@id": "https://sanko-setsubi-corp.com/#organization",
         "name": "三交設備株式会社",
-        "alternateName": "三交設備",
+        "legalName": "三交設備株式会社",
+        "alternateName": [
+          "三交設備",
+          "サンコウセツビ",
+          "三交設備(株)"
+        ],
         "url": "https://sanko-setsubi-corp.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sanko-setsubi-corp.com/assets/images/logo.svg",
+          "width": 512,
+          "height": 512
+        },
         "image": "https://sanko-setsubi-corp.com/assets/images/hero-piping.jpeg",
-        "description": "関西圏を拠点に、給排水衛生設備・消火設備・空調設備の配管工事の施工から保守・点検、修理までを一貫して手がける設備工事会社です。",
+        "description": "大阪市西淀川区に本店を置き、関西圏で給排水衛生設備・消火設備・空調設備の配管工事の施工から保守・点検、修理までを一貫して手がける設備工事会社です。",
         "telephone": "+81-6-7509-2714",
         "faxNumber": "+81-6-6473-5354",
         "email": "sanko_watanabe@maia.eonet.ne.jp",
         "foundingDate": "2014-08-06",
+        "taxID": "6120001185558",
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "法人番号",
+          "value": "6120001185558"
+        },
+        "numberOfEmployees": {
+          "@type": "QuantitativeValue",
+          "value": 10
+        },
+        "employee": {
+          "@type": "Person",
+          "name": "渡邊 壽樹",
+          "jobTitle": "代表者"
+        },
         "address": {
           "@type": "PostalAddress",
           "postalCode": "555-0025",
           "addressCountry": "JP",
           "addressRegion": "大阪府",
           "addressLocality": "大阪市西淀川区",
-          "streetAddress": "姫里1-7-13"
+          "streetAddress": "姫里1丁目7番13号"
         },
-        "areaServed": {
-          "@type": "Place",
-          "name": "近畿圏"
-        },
+        "hasMap": "https://maps.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E8%A5%BF%E6%B7%80%E5%B7%9D%E5%8C%BA%E5%A7%AB%E9%87%8C1-7-13",
+        "sameAs": [
+          "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6120001185558"
+        ],
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "大阪府"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "兵庫県"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "京都府"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "奈良県"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "滋賀県"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "和歌山県"
+          }
+        ],
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
             "opens": "08:00",
             "closes": "17:00"
           }
         ],
-        "knowsAbout": ["給排水衛生設備工事", "消火設備配管工事", "空調配管設備工事"]
+        "knowsAbout": [
+          "給排水衛生設備工事",
+          "消火設備配管工事",
+          "空調配管設備工事"
+        ]
       },
       {
         "@type": "WebSite",
@@ -65,7 +132,9 @@
         "url": "https://sanko-setsubi-corp.com/",
         "name": "三交設備株式会社",
         "inLanguage": "ja",
-        "publisher": { "@id": "https://sanko-setsubi-corp.com/#organization" }
+        "publisher": {
+          "@id": "https://sanko-setsubi-corp.com/#organization"
+        }
       }
     ]
   }
@@ -86,6 +155,7 @@
       </button>
       <nav class="nav" id="site-nav">
         <a class="nav__link is-active" href="index.html">Home</a>
+        <a class="nav__link" href="company.html">会社概要</a>
         <a class="nav__link" href="business.html">事業内容</a>
         <a class="nav__link" href="quality.html">品質管理</a>
         <a class="nav__link" href="recruit.html">採用情報</a>
@@ -118,7 +188,7 @@
     <section class="intro">
       <div class="eyebrow">INTEGRITY IN EVERY PIPE</div>
       <h2>「見えない部分」にこそ、確かな技術と責任を。</h2>
-      <p>生活や社会活動の基盤となる配管インフラ。給排水・消火・空調の各設備を、施工からメンテナンスまで一貫体制で。三交設備は、数十年先を見据えた誠実な仕事を積み重ねています。</p>
+      <p>生活や社会活動の基盤となる配管インフラ。給排水・消火・空調の各設備を、施工からメンテナンスまで一貫体制で。大阪市西淀川区に本店を置く三交設備株式会社は、関西圏の現場で数十年先を見据えた誠実な仕事を積み重ねています。</p>
     </section>
 
     <!-- FEATURE ROWS（交互フルワイド） -->
@@ -163,6 +233,19 @@
         </div>
       </a>
 
+      <a class="feature feature--reverse" href="company.html">
+        <div class="feature__media media">
+          <img loading="lazy" src="assets/images/site-inspection.jpeg" alt="現場で設備を点検する様子" width="1600" height="1066">
+        </div>
+        <div class="feature__text">
+          <div class="feature__num">04</div>
+          <div class="eyebrow">COMPANY</div>
+          <h2>会社概要</h2>
+          <p>三交設備株式会社は、2014年に設立し、大阪市西淀川区姫里に本店を置く設備工事会社です。商号・所在地・代表者・資本金・法人番号といった会社情報と、これまでの沿革をご紹介します。</p>
+          <span class="text-link">会社概要を見る →</span>
+        </div>
+      </a>
+
     </section>
 
     <!-- CLOSING CTA -->
@@ -188,6 +271,7 @@
         <div class="site-footer__col-title">SITE MAP</div>
         <div class="site-footer__links">
           <a href="index.html">Home</a>
+          <a href="company.html">会社概要</a>
           <a href="business.html">事業内容</a>
           <a href="quality.html">品質管理</a>
         </div>
