@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="三交設備株式会社">
+  <defs>
+    <linearGradient id="sankoLogoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15639e"/>
+      <stop offset="1" stop-color="#2e8fcf"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#sankoLogoGrad)"/>
+  <rect x="146" y="150" width="220" height="34" rx="17" fill="#ffffff"/>
+  <rect x="176" y="239" width="160" height="34" rx="17" fill="#ffffff"/>
+  <rect x="126" y="328" width="260" height="34" rx="17" fill="#ffffff"/>
+</svg>
