@@ -45,7 +45,7 @@
       "@type": "Organization",
       "name": "三交設備株式会社",
       "sameAs": "https://sanko-setsubi-corp.com/",
-      "logo": "https://sanko-setsubi-corp.com/assets/favicon.svg"
+      "logo": "https://sanko-setsubi-corp.com/assets/images/logo.svg"
     },
     "jobLocation": {
       "@type": "Place",
@@ -76,6 +76,26 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ホーム",
+        "item": "https://sanko-setsubi-corp.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "採用情報",
+        "item": "https://sanko-setsubi-corp.com/recruit.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <div class="page">
@@ -91,6 +111,7 @@
       </button>
       <nav class="nav" id="site-nav">
         <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="company.html">会社概要</a>
         <a class="nav__link" href="business.html">事業内容</a>
         <a class="nav__link" href="quality.html">品質管理</a>
         <a class="nav__link is-active" href="recruit.html">採用情報</a>
@@ -218,6 +239,7 @@
         <div class="site-footer__col-title">SITE MAP</div>
         <div class="site-footer__links">
           <a href="index.html">Home</a>
+          <a href="company.html">会社概要</a>
           <a href="business.html">事業内容</a>
           <a href="quality.html">品質管理</a>
         </div>
