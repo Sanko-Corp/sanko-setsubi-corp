@@ -551,7 +551,7 @@ a.feature:hover .text-link { gap: 11px; }
     stroke-linejoin: round;
   }
   .mobile-bar__item.is-active { color: var(--blue); }
-  .mobile-bar__item--tel { color: var(--blue); }
+  .mobile-bar__item--contact { color: var(--blue); }
 
   /* 固定バーでフッター末尾が隠れないよう余白を足す */
   .site-footer { padding-bottom: calc(30px + 58px + env(safe-area-inset-bottom)); }
