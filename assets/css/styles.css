@@ -205,8 +205,46 @@ button {
 }
 .nav__cta:hover { background: var(--blue-hover); }
 
-.nav-toggle { display: none; flex-direction: column; gap: 5px; padding: 8px; }
-.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; }
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 48px;
+  min-height: 48px;
+  margin-right: -8px;
+  padding: 4px 8px;
+  color: var(--navy);
+}
+.nav-toggle__bars { position: relative; display: block; width: 24px; height: 16px; }
+.nav-toggle__bars span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .15s ease;
+}
+.nav-toggle__bars span:nth-child(1) { top: 0; }
+.nav-toggle__bars span:nth-child(2) { top: 7px; }
+.nav-toggle__bars span:nth-child(3) { top: 14px; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__bars span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle__bars span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__bars span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-toggle__label {
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1;
+  color: var(--navy);
+}
+
+/* ---- Mobile bottom bar (900px以下で表示) ------------------------------- */
+.mobile-bar { display: none; }
 
 /* ---- Footer ------------------------------------------------------------ */
 .site-footer { background: var(--navy-deep); color: var(--pale-3); padding: 60px var(--pad-x) 30px; }
@@ -473,6 +511,50 @@ a.feature:hover .text-link { gap: 11px; }
   .nav__link { padding: 14px 4px; border-bottom: 1px solid var(--border); border-radius: 0; }
   .nav__link.is-active { border-bottom-color: var(--border); }
   .nav__cta { margin: 12px 0 0; text-align: center; }
+
+  /* 画面下部の固定タブバー */
+  .mobile-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    background: rgba(255, 255, 255, .96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -4px 18px rgba(13, 39, 64, .07);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .mobile-bar__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 58px;
+    padding: 9px 2px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    color: #4a6072;
+    transition: color .2s ease;
+  }
+  .mobile-bar__item svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .mobile-bar__item.is-active { color: var(--blue); }
+  .mobile-bar__item--tel { color: var(--blue); }
+
+  /* 固定バーでフッター末尾が隠れないよう余白を足す */
+  .site-footer { padding-bottom: calc(30px + 58px + env(safe-area-inset-bottom)); }
 
   .persona-grid { grid-template-columns: 1fr; }
 

@@ -26,8 +26,9 @@
         <span class="brand__mark">三</span>
         <span class="brand__name">三交設備<small>株式会社</small></span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="site-nav">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle__label">MENU</span>
       </button>
       <nav class="nav" id="site-nav">
         <a class="nav__link" href="/">Home</a>
@@ -86,6 +87,25 @@
     </div>
     <div class="site-footer__copy">© 2026 三交設備株式会社</div>
   </footer>
+
+  <nav class="mobile-bar" aria-label="クイックメニュー">
+    <a class="mobile-bar__item" href="index.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7"/><path d="M6.5 9.8V20h11V9.8"/></svg>
+      <span>ホーム</span>
+    </a>
+    <a class="mobile-bar__item" href="business.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 4.2a4.5 4.5 0 0 0-5.9 5.9l-5.4 5.4a1.6 1.6 0 0 0 0 2.3l2 2a1.6 1.6 0 0 0 2.3 0l5.4-5.4a4.5 4.5 0 0 0 5.9-5.9l-2.9 2.9-2.3-2.3z"/></svg>
+      <span>事業内容</span>
+    </a>
+    <a class="mobile-bar__item" href="recruit.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9.8" cy="8.4" r="3.4"/><path d="M3.8 20v-.9a4.2 4.2 0 0 1 4.2-4.2h3.6a4.2 4.2 0 0 1 4.2 4.2v.9"/><path d="M19 4.4v4.2M16.9 6.5h4.2"/></svg>
+      <span>採用情報</span>
+    </a>
+    <a class="mobile-bar__item mobile-bar__item--tel" href="tel:0675092714">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 3.6 5.4 4.8a1.6 1.6 0 0 0-.92 1.9 16.5 16.5 0 0 0 11.8 11.8 1.6 1.6 0 0 0 1.9-.92l1.2-2.8-3.9-1.7-1.6 1.9a12.8 12.8 0 0 1-5.6-5.6l1.9-1.6z"/></svg>
+      <span>電話</span>
+    </a>
+  </nav>
 
 </div>
 </body>

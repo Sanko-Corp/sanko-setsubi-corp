@@ -19,11 +19,13 @@
     var nav = document.getElementById('site-nav');
     if (!toggle || !nav) return;
 
+    var label = toggle.querySelector('.nav-toggle__label');
     var mq = window.matchMedia('(max-width: 900px)');
 
     function setOpen(open) {
       toggle.setAttribute('aria-expanded', String(open));
       nav.hidden = !open;
+      if (label) label.textContent = open ? 'CLOSE' : 'MENU';
     }
 
     // 初期状態: モバイル幅では閉じる、それ以外は常時表示（hidden解除）
@@ -33,6 +35,7 @@
       } else {
         nav.hidden = false;
         toggle.setAttribute('aria-expanded', 'false');
+        if (label) label.textContent = 'MENU';
       }
     }
 
@@ -43,6 +46,14 @@
     // ナビ内リンクをタップしたら閉じる
     nav.addEventListener('click', function (e) {
       if (mq.matches && e.target.closest('a')) setOpen(false);
+    });
+
+    // Escapeキーで閉じる
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mq.matches && !nav.hidden) {
+        setOpen(false);
+        toggle.focus();
+      }
     });
 
     mq.addEventListener('change', sync);
